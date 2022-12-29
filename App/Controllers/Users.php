@@ -12,7 +12,7 @@ class Users extends Controller
 
         if (!$user) {
             http_response_code(404);
-            echo json_encode(["erro" => "Registro não encontrado."]);
+            echo json_encode(["error" => "Registro não encontrado."]);
 
             exit;
         }
@@ -42,7 +42,7 @@ class Users extends Controller
             empty($userModel->cel)) {
 
             http_response_code(500);
-            echo json_encode(["erro" => "Campos obrigatórios não preenchidos."]);
+            echo json_encode(["error" => "Campos obrigatórios não preenchidos."]);
         } else if ($userModel) {
             $userModel = $userModel->create();
 
@@ -75,7 +75,7 @@ class Users extends Controller
             empty($userModel->cel)) {
 
             http_response_code(500);
-            echo json_encode(["erro" => "Campos obrigatórios não preenchidos."]);
+            echo json_encode(["error" => "Campos obrigatórios não preenchidos."]);
         } else {
             $userModel->update();
 
@@ -92,7 +92,7 @@ class Users extends Controller
 
         if (!$userModel) {
             http_response_code(404);
-            echo json_encode(["erro" => "Registro não encontrado."]);
+            echo json_encode(["error" => "Registro não encontrado."]);
             exit;
         } else {
             http_response_code(200);
