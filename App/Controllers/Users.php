@@ -47,7 +47,7 @@ class Users extends Controller
             $userModel = $userModel->create();
 
             http_response_code(201);
-            echo json_encode(["sucess" => "Registro cadastrado com sucesso."]);
+            echo json_encode(["success" => "Registro cadastrado com sucesso."]);
         }
     }
 
@@ -80,7 +80,7 @@ class Users extends Controller
             $userModel->update();
 
             http_response_code(201);
-            echo json_encode(["sucess" => "Registro atualizado com sucesso."]);
+            echo json_encode(["success" => "Registro atualizado com sucesso."]);
         }
     }
 
@@ -96,7 +96,7 @@ class Users extends Controller
             exit;
         } else {
             http_response_code(200);
-            echo json_encode(["sucess" => "Registro excluído com sucesso."]);
+            echo json_encode(["success" => "Registro excluído com sucesso."]);
         }
 
         $userModel->delete();
